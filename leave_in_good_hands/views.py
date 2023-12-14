@@ -67,7 +67,7 @@ class DonationView(LoginRequiredMixin, View):
                                                pick_up_date=pick_up_date,
                                                pick_up_time=pick_up_time, pick_up_comment=pick_up_comment,
                                                user=request.user)
-            return request('form-confirmation.html', {'donation': donation, 'quantity': quantity,
+            return render(request,'form-confirmation.html', {'donation': donation, 'quantity': quantity,
                                                        'categories': categories, 'institution': institution,
                                                        'address': address,
                                                        'phone_number': phone_number, 'city': city, 'zip_code': zip_code,
@@ -79,6 +79,10 @@ class DonationView(LoginRequiredMixin, View):
         return render(request, 'form.html', {'institutions': institutions, 'form': form})
 
 
+class Confirmation(LoginRequiredMixin, View):
+    def get(self, request):
+        donations = Donation.objects.all()
+        return render(request, 'form-confirmation.html', {'donations': donations} )
 
 class UserProfile(LoginRequiredMixin, View):
 
