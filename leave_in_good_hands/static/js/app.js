@@ -166,6 +166,9 @@ document.addEventListener("DOMContentLoaded", function() {
    * Switching between form steps
    */
   class FormSteps {
+
+    selCat = [];
+
     constructor(form) {
       this.$form = form;
       this.$next = form.querySelectorAll(".next-step");
@@ -192,13 +195,24 @@ document.addEventListener("DOMContentLoaded", function() {
      * All events that are happening in form
      */
 
-
-
     events() {
       // Next step
       this.$next.forEach(btn => {
         btn.addEventListener("click", e => {
           e.preventDefault();
+
+          if (this.currentStep == 1) {
+            let checkboxes = document.querySelectorAll('.categories');
+            let checkedCategories = [];
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    checkedCategories.push(checkboxes[i].value);
+                }
+            }
+            this.selCat = checkedCategories;
+          }
+
           this.currentStep++;
           this.updateForm();
         });
@@ -234,14 +248,31 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       });
 
+
+      if (this.currentStep == 3) {
+         // alert(this.selCat);
+         // Pobierz wszystkie organizacje
+        let organizationDivs = document.querySelectorAll('[data-step="3"] div label');
+
+        // Ukryj wszystkie organizacje
+        organizationDivs.forEach((organizationDiv) => {
+            let cats = organizationDiv.children[0].getAttribute('data-cats').split(';');
+            for(let i=0; i<this.selCat.length; i++) {
+                if(!(this.selCat[i] in cats)) {
+                    organizationDiv.style.display = 'none';
+                } else {
+                    organizationDiv.style.display = '';
+                }
+            }
+        });
+
+      }
+
       this.$stepInstructions[0].parentElement.parentElement.hidden = this.currentStep >= 6;
       this.$step.parentElement.hidden = this.currentStep >= 6;
 
       // TODO: get data from inputs and show them in summary
     }
-
-
-
 
     /**
      * Submit form
@@ -288,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Pokaż organizacje związane z zaznaczonymi kategoriami
         organizationDivs.forEach(function (organizationDiv) {
-            let organizationCategories = organizationDiv.getAttribute('data-categories').split(',');
+            let organizationCategories = organizationDiv.getAttribute('data-cats').split(';');
 
             if (checkedCategories.some(function (category) {
                 return organizationCategories.includes(category);

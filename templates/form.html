@@ -97,7 +97,7 @@
                     <div class="form-group form-group--checkbox">
                         <label id="id_categories">
                             <input
-                                    type="checkbox"  
+                                    type="checkbox"
                                     name="categories"
                                     value="{{ category.id }}"
                                     class="category-checkbox categories"
@@ -136,21 +136,21 @@
             <div data-step="3">
                 <h3>Wybierz organizacje, której chcesz pomóc:</h3>
                 {% for institution in institutions %}
-                    <div class="form-group form-group--checkbox" data-categories="{{ institution.categories }}">
+                <div class="form-group form-group--checkbox">
                         <label id="id_organizations">
-                            <input type="radio" name="institution" value="{{ institution.id }}"/>
+                            <input type="radio" name="institution" value="{{ institution.id }}"
+                                   data-cats="{% for assoc_category in institution.categories.values %}{{ assoc_category.id }};{% endfor %}"
+                             />
                             <span class="checkbox radio"></span>
                             <span class="description">
-      <div class="title">{{ institution.name }}</div>
-      <div class="subtitle">
-          {{ institution.description }}
-      </div>
-    </span>
+                              <div class="title">{{ institution.name }}</div>
+                              <div class="subtitle">
+                                  {{ institution.description }}
+                              </div>
+                            </span>
                         </label>
                     </div>
                 {% endfor %}
-
-
 
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
@@ -211,7 +211,7 @@
             </div>
 
             <!-- STEP 5 -->
-            <div data-step="5">
+            <div data-step="5" class="active">
                 <h3>Podsumowanie Twojej darowizny</h3>
 
                 <div class="summary">

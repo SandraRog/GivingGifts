@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ff05073-781c-4d1c-b4ac-df788885b1e4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PrzekazDary.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leave_in_good_hands/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/leave_in_good_hands/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leave_in_good_hands/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/leave_in_good_hands/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form-confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form-confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leave_in_good_hands/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/leave_in_good_hands/static/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702539690700</updated>
-      <workItem from="1702539696918" duration="5278000" />
+      <workItem from="1702539696918" duration="11178000" />
     </task>
     <servers />
   </component>
