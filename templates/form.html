@@ -228,7 +228,7 @@
                             <li>
                                 <span class="icon icon-hand"></span>
                                 <span class="summary--text"
-                                >Dla fundacji "Mam marzenie" w Warszawie</span
+                                >{{ institution.name}}</span
                                 >
                             </li>
                         </ul>
@@ -238,19 +238,19 @@
                         <div class="form-section--column">
                             <h4>Adres odbioru:</h4>
                             <ul>
-                                <li>Prosta 51 {{ address }}</li>
-                                <li>Warszawa {{ city }}</li>
-                                <li>99-098 {{ zip_code }}</li>
-                                <li>123 456 789 {{ phone_number }}</li>
+                                <li>{{ address }}</li>
+                                <li>{{ city }}</li>
+                                <li>{{ zip_code }}</li>
+                                <li>{{ phone_number }}</li>
                             </ul>
                         </div>
 
                         <div class="form-section--column">
                             <h4>Termin odbioru:</h4>
                             <ul>
-                                <li>13/12/2018 {{ pick_up_date }}</li>
-                                <li>15:40 {{ pick_up_time }}</li>
-                                <li>Brak uwag {{ pick_up_comment }}</li>
+                                <li>{{ pick_up_date }}</li>
+                                <li>{{ pick_up_time }}</li>
+                                <li>{{ pick_up_comment }}</li>
                             </ul>
                         </div>
                     </div>

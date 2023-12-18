@@ -293,39 +293,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// obsluga formularza
-
-document.addEventListener("DOMContentLoaded", function() {
-    let fundationBtn = document.querySelector('#getFundationBtn');
-
-    fundationBtn.addEventListener("click", function() {
-        // Pobierz zaznaczone kategorie
-        let checkboxes = document.querySelectorAll('.categories');
-        let checkedCategories = [];
-
-        for (let i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                checkedCategories.push(checkboxes[i].value);
-            }
-        }
-
-        // Pobierz wszystkie organizacje
-        let organizationDivs = document.querySelectorAll('[data-step="3"] .institution');
-
-        // Ukryj wszystkie organizacje
-        organizationDivs.forEach(function(organizationDiv) {
-            organizationDiv.style.display = 'none';
-        });
-
-        // Pokaż organizacje związane z zaznaczonymi kategoriami
-        organizationDivs.forEach(function (organizationDiv) {
-            let organizationCategories = organizationDiv.getAttribute('data-cats').split(';');
-
-            if (checkedCategories.some(function (category) {
-                return organizationCategories.includes(category);
-            })) {
-                organizationDiv.style.display = 'block';
-            }
-        });
-    });
-});
