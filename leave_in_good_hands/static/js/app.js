@@ -274,6 +274,27 @@ document.addEventListener("DOMContentLoaded", function() {
       // TODO: get data from inputs and show them in summary
     }
 
+    getData() {
+    const data = {};
+
+    // Pobierz dane z kroków formularza
+    this.slides.forEach(slide => {
+      const inputs = slide.querySelectorAll('input, select, textarea');
+
+      inputs.forEach(input => {
+        const name = input.name;
+        const value = input.value;
+
+        if (name) {
+          data[name] = value;
+        }
+      });
+    });
+
+    return data;
+  }
+
+
     /**
      * Submit form
      *

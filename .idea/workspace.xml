@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ff05073-781c-4d1c-b4ac-df788885b1e4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/leave_in_good_hands/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/leave_in_good_hands/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +20,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2ZWZEfOfAGHfGlMfb8w7R343fbE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jakub/PycharmProjects/Stable",
+    "last_opened_file_path": "C:/Users/jakub/PycharmProjects/djangoProject1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,6 +78,11 @@
       <option name="presentableId" value="Default" />
       <updated>1702539690700</updated>
       <workItem from="1702539696918" duration="21139000" />
+      <workItem from="1702888320470" duration="1848000" />
+      <workItem from="1702974451751" duration="1196000" />
+      <workItem from="1703064017222" duration="1455000" />
+      <workItem from="1703073721223" duration="96000" />
+      <workItem from="1705489192612" duration="2527000" />
     </task>
     <servers />
   </component>
